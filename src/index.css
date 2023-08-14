@@ -29,7 +29,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+/* ----------------------clock----------------------------------- */
 @media screen and (min-width:320px) and (max-width:768px) {
 .clock-class{
     height: 20rem;
@@ -40,4 +40,42 @@
     height: 60px;
     font-size: 15px;
 }
+/* ---------------------------------stopwatch----------------------- */
+.reshour-class{
+height: 5rem;
+width: 5rem;
+font-size: 20px;
+}
+.resmin-class{
+    height: 5rem;
+width: 5rem;
+    font-size: 20px;
+}
+.ressec-class{
+    height: 5rem;
+    width: 5rem;
+    font-size: 20px;
+}
+.parent-class{
+    font-size: 60px;
+}
+.superparent-class{
+gap: 10px;    
+}
+.resstart-class{
+    height: 50px;
+    width: 90px;
+    font-size: 20px;
+}
+.resstop-class{
+    height: 50px;
+    width: 90px;
+    font-size: 20px;
+}
+.resreset-class{
+    height: 50px;
+    width: 90px;
+    font-size: 20px;
+}
+
 }
