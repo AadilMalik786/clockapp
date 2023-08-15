@@ -79,3 +79,9 @@ gap: 10px;
 }
 
 }
+input::placeholder{
+    color: red;
+}
+input:focus {
+    outline: none;
+}

@@ -167,9 +167,9 @@ const Timer =()=>{
                 </section>
         <div className="flex gap-[10px]">
             
-            <input type="text" maxLength={2} placeholder="HH"  className="border h-[40px] w-[50px] rounded-[10px]" name="adil" ref={hora}  />
-            <input type="text" maxLength={2} placeholder="MM" className="border h-[40px] w-[50px] rounded-[10px]" name="wasim" ref={mino} />
-            <input type="text" maxLength={2} placeholder="SS"  className="border h-[40px] w-[50px] rounded-[10px]" name="malik" ref={seco}/>
+            <input type="text" maxLength={2} placeholder="HH"  className=" first-class text-center  border-[2px] border-black text-[red] bg-cyan-950   h-[40px] hover:bg-blue-400 w-[50px] rounded-[10px]" name="adil" ref={hora}  />
+            <input type="text" maxLength={2} placeholder="MM" className="border-[2px] border-black text-center bg-cyan-950 h-[40px] hover:bg-blue-400 w-[50px] rounded-[10px]" name="wasim" ref={mino} />
+            <input type="text" maxLength={2} placeholder="SS"  className="border-[2px] border-black text-center bg-cyan-950 h-[40px] hover:bg-blue-400 w-[50px] rounded-[10px]" name="malik" ref={seco}/>
             <button className="border-[2px] border-black rounded-[10px] hover:bg-blue-400" onClick={stoped}>Stop Alarm</button>
         </div>
         <audio ref={myref}>
