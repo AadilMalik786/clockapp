@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useState,useEffect } from "react";
 const Stopwatch =()=>{
+    const myref =useRef();
     const [second, setSecond] = useState(0);
-        let [minute, setMinute] = useState(0);
+    let [minute, setMinute] = useState(0);
         let [hour, setHour] = useState(0);
         const [stop, setStop] = useState(false)
         const [id, setId] = useState(false);
@@ -42,6 +43,7 @@ const Stopwatch =()=>{
         //events--------------------------------------------------------------
         const startEventHandler = () => {
         setStop(true);
+        // console.log(myref.current.textContent);
         }
         const stopEventHandler=()=>{
             setStop(false);
@@ -94,10 +96,10 @@ const Stopwatch =()=>{
                             </div>}
                                 <span className="">:</span>
                         {second<10?(
-                            <div className="bg-blue-400 h-[200px] flex justify-center items-center rounded-[20px] ressec-class">
+                            <div ref={myref} className="bg-blue-400 h-[200px] flex justify-center items-center rounded-[20px] ressec-class" >
                                 {"0"+second}
                             </div>
-                            ):<div className="bg-blue-400 h-[200px] flex justify-center items-center rounded-[20px] ressec-class">
+                            ):<div ref={myref} className="bg-blue-400 h-[200px] flex justify-center items-center rounded-[20px] ressec-class" >
                             {second}
                         </div>}
                         </article>
