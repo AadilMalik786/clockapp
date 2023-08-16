@@ -413,7 +413,7 @@ const WorldClock = () => {
           <button onClick={handleSelect} className="border-[2px] border-black rounded-[20px] text-[25px] h-[50px] w-[150px] hover:bg-sky-800 btn-class">Select</button>
         </div>
 
-        <h2 className="text-[40px] text-white currenttime-class">Current Time in {selectedTimeZone}</h2>
+        <h2 className="text-[40px] text-white currenttime-class">{selectedTimeZone}</h2>
         <p className="text-[100px] my-[-50px] exacttime-class">{currentTime}</p>
       </div>
 
