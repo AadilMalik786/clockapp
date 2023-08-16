@@ -65,11 +65,17 @@
 
 /* ----------------------clock----------------------------------- */
 @media screen and (min-width:320px) and (max-width:768px) {
-    .clock-class {
+    .image-class {
         height: 20rem;
         width: 20rem;
         overflow-x: hidden;
-        margin-bottom: 300px;
+        justify-content: center;
+        margin-bottom: 350px;
+    }
+    .clockparent-class{
+
+        display: flex;
+        justify-content: center;
     }
 
     .resnavi-class {
