@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-#hour{
+
+#hour {
     position: absolute;
     background-color: red;
     border-radius: 10px;
@@ -9,7 +10,8 @@
     /* display: none; */
     /* opacity: 0.4; */
 }
-#minute{
+
+#minute {
     position: absolute;
     background-color: blue;
     border-radius: 10px;
@@ -17,71 +19,134 @@
     /* display: none; */
     /* opacity: 0.4; */
 }
-#second{
+
+#second {
     position: absolute;
     background-color: green;
     border-radius: 10px;
     /* display: none; */
-    /* opacity: 0.4; */transform-origin: bottom;
+    /* opacity: 0.4; */
+    transform-origin: bottom;
 }
-.image-class{
+
+.image-class {
     background-image: url(/src/images/clock.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* ----------------------clock----------------------------------- */
-@media screen and (min-width:320px) and (max-width:768px) {
-.clock-class{
-    height: 20rem;
-    width: 20rem;
-    overflow-x: hidden;
-}
-.resnavi-class{
-    height: 60px;
-    font-size: 15px;
-}
-/* ---------------------------------stopwatch----------------------- */
-.reshour-class{
-height: 5rem;
-width: 5rem;
-font-size: 20px;
-}
-.resmin-class{
-    height: 5rem;
-width: 5rem;
-    font-size: 20px;
-}
-.ressec-class{
-    height: 5rem;
-    width: 5rem;
-    font-size: 20px;
-}
-.parent-class{
-    font-size: 60px;
-}
-.superparent-class{
-gap: 10px;    
-}
-.resstart-class{
-    height: 50px;
-    width: 90px;
-    font-size: 20px;
-}
-.resstop-class{
-    height: 50px;
-    width: 90px;
-    font-size: 20px;
-}
-.resreset-class{
-    height: 50px;
-    width: 90px;
-    font-size: 20px;
+@media  screen and (min-width:320px) and (max-width:584px) {
+    .he-class{
+        font-size: 40px;
+        color: red;
+    }
+    .inp-class{
+        width: 180px;
+    }
+    .btn-class{
+        width: 100px;
+        
+        font-size: 20px;
+    }
+    .btnparent-class{
+        gap: 10px;
+    }
+    .worldparent-class{
+        gap: 30px;
+    }
+    .currenttime-class{
+        font-size: 23px;
+    }
+    .exacttime-class{
+        font-size: 50px;
+        margin-top: 20px;
+    }
 }
 
+/* ----------------------clock----------------------------------- */
+@media screen and (min-width:320px) and (max-width:768px) {
+    .clock-class {
+        height: 20rem;
+        width: 20rem;
+        overflow-x: hidden;
+        margin-bottom: 300px;
+    }
+
+    .resnavi-class {
+        height: 60px;
+        font-size: 15px;
+    }
+
+    /* ---------------------------------stopwatch----------------------- */
+    .reshour-class {
+        height: 5rem;
+        width: 5rem;
+        font-size: 20px;
+    }
+
+    .resmin-class {
+        height: 5rem;
+        width: 5rem;
+        font-size: 20px;
+    }
+
+    .ressec-class {
+        height: 5rem;
+        width: 5rem;
+        font-size: 20px;
+    }
+
+    .parent-class {
+        font-size: 60px;
+        position: absolute;
+        bottom: 80%;
+        /* margin-bottom: 500px; */
+
+    }
+
+    .timerbuttonparent-class {
+        gap: 10px;
+    }
+
+    .superparent-class {
+        gap: 10px;
+        position: absolute;
+        bottom: 70%;
+    }
+
+    .superlaptimeparent-class {
+        gap: 10px;
+    }
+
+    .resstart-class {
+        height: 50px;
+        width: 90px;
+        font-size: 20px;
+    }
+
+    .resstop-class {
+        height: 50px;
+        width: 90px;
+        font-size: 20px;
+    }
+
+    .resreset-class {
+        height: 50px;
+        width: 90px;
+        font-size: 20px;
+    }
+
+    /* ------------------timer */
+    .timerparent-class {
+        font-size: 60px;
+        margin-top: 50px;
+    }
+
 }
-input::placeholder{
+
+input::placeholder {
     color: red;
 }
+
 input:focus {
     outline: none;
 }
