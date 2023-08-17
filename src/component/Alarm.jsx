@@ -114,7 +114,7 @@ const Alarm = () => {
                 ))}
             </div>
             <div>
-                {/* {timehour}:{timeminute}:{timesecond} {meridiem} */}
+
                 {realtime} {meridiem}
             </div>
             <input type="text" value={hour} onChange={handleChangeHour} className="border" />
