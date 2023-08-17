@@ -7,7 +7,7 @@ const Alarm = () => {
     const [timehour, setTimeHour] = useState(new Date().toTimeString().split(" ")[0].split(":")[0]);
     const [timeminute, setTimeMinute] = useState(new Date().toTimeString().split(" ")[0].split(":")[1]);
     const [timesecond, setTimeSecond] = useState(new Date().toTimeString().split(" ")[0].split(":")[2]);
-    const [meridiem, setMeridiem] = useState(new Date().toLocaleTimeString().split(" ")[1]);
+    const [meridiem, setMeridiem] = useState(new Date().getHours() >= 12 ? "PM" : "AM");
     const [realtime, setRealTime] = useState();
     // console.log(new Date().toTimeString().split(" ")[0].split(":")[0]);
     // console.log(new Date().toLocaleTimeString().split(" ")[1]);
