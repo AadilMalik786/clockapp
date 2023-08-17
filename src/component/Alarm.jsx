@@ -39,7 +39,7 @@ const Alarm = () => {
             setTimeHour(new Date().toTimeString().split(" ")[0].split(":")[0]);
             setTimeMinute(new Date().toTimeString().split(" ")[0].split(":")[1]);
             setTimeSecond(new Date().toTimeString().split(" ")[0].split(":")[2]);
-            setMeridiem(new Date().toLocaleTimeString().split(" ")[1]);
+            // setMeridiem(new Date().toLocaleTimeString().split(" ")[1]);
             // console.log(new Date().toTimeString().split(" ")[0].split(":")[2]);
             alarms.forEach(element => {
                 
@@ -115,7 +115,7 @@ const Alarm = () => {
             </div>
             <div>
 
-                {realtime} {meridiem}
+                {realtime} <span>{meridiem}</span>
             </div>
             <input type="text" value={hour} onChange={handleChangeHour} className="border" />
             <input type="text" value={minute} onChange={handleChangeMinute} className="border" />
