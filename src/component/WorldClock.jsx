@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 // import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "../component/Header";
 const WorldClock = () => {
   // console.log(new Intl.DateTimeFormat());
   // const [timeZones, setTimeZones] = useState([]);
+  
   const [currentTime, setCurrentTime] = useState("");
   const [selectedTimeZone, setSelectedTimeZone] = useState('Asia/Kolkata'); // Default time zone
   const [inputValue, setInputValue] = useState('');
@@ -365,7 +366,7 @@ const WorldClock = () => {
       timeZone: selectedTimeZone,
       hour: 'numeric',
       minute: 'numeric',
-      second: 'numeric',
+      second: 'numeric',  
       hour12: true,
     });
 
@@ -416,6 +417,7 @@ const WorldClock = () => {
         <h2 className="text-[40px] text-white currenttime-class">{selectedTimeZone}</h2>
         <p className="text-[100px] my-[-50px] exacttime-class">{currentTime}</p>
       </div>
+     
 
 
     </>
