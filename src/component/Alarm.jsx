@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-// import { Link } from "react-router-dom";
-import music from "../audio/music.mp3"
+import music from "../audio/music.mp3";
 import Header from "../component/Header";
-import {RiDeleteBin6Line} from "react-icons/ri"
+import {RiDeleteBin6Line} from "react-icons/ri";
 const Alarm = () => {
     const audioref = useRef();
     const [timehour, setTimeHour] = useState(new Date().toTimeString().split(" ")[0].split(":")[0]);
@@ -19,7 +18,6 @@ const Alarm = () => {
     const [addalarm,setAddAlarm]=useState(false);
 
     function audio() {
-
         if (audioref.current) {
             audioref.current.load();
             audioref.current.play();
@@ -68,15 +66,12 @@ const Alarm = () => {
     };
     const handleChangeMinute = (e) => {
         setMinute(e.target.value);
-        // console.log(e);
     };
     const handleChangeSecond = (e) => {
         setSecond(e.target.value);
-        // console.log(e);
     };
     const handleChangeMeridiem = (e) => {
         setAfterMeridiem(e.target.value);
-        // console.log(e);
     };
     const addAlarm = () => {
         if (hour !== "" && minute !== "" && second !== "") {
@@ -87,7 +82,6 @@ const Alarm = () => {
                 second: second,
                 aftermeridiem: aftermeridiem
             };
-
             setAlarms(prevAlarms => [...prevAlarms, newAlarm]);
             setHour("");
             setMinute("");
@@ -119,11 +113,11 @@ const Alarm = () => {
                     {realtime} <span>{meridiem}</span>
                 </div>
                 <div>
-                    <div className="flex gap-[10px] h-[80px] ampmparent-class  ">
+                    <div className="flex gap-[10px] h-[80px] ampmparent-class">
                         <input type="text" value={hour} onChange={handleChangeHour} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class"   />
                         <input type="text" value={minute} onChange={handleChangeMinute} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class"  />
                         <input type="text" value={second} onChange={handleChangeSecond} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class" />
-                        <input type="text" list="bind" value={aftermeridiem} onChange={handleChangeMeridiem} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinputampm-class" />
+                        <input type="text" list="bind" value={aftermeridiem} onChange={handleChangeMeridiem} className="border w-[180px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinputampm-class" />
                     </div>
 
                     <datalist id="bind">
