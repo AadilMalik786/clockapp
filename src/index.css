@@ -83,6 +83,14 @@
     .laping-class{
         margin-top: 10px;
     }
+    .allinputampm-class{
+        width: 90px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .ampmparent-class{
+        gap: 5px;
+    }
 }
 
 /* ----------------------clock----------------------------------- */

@@ -119,11 +119,11 @@ const Alarm = () => {
                     {realtime} <span>{meridiem}</span>
                 </div>
                 <div>
-                    <div className="flex gap-[10px] h-[80px]  ">
+                    <div className="flex gap-[10px] h-[80px] ampmparent-class  ">
                         <input type="text" value={hour} onChange={handleChangeHour} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class"   />
                         <input type="text" value={minute} onChange={handleChangeMinute} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class"  />
                         <input type="text" value={second} onChange={handleChangeSecond} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class" />
-                        <input type="text" list="bind" value={aftermeridiem} onChange={handleChangeMeridiem} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class" />
+                        <input type="text" list="bind" value={aftermeridiem} onChange={handleChangeMeridiem} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinputampm-class" />
                     </div>
 
                     <datalist id="bind">
