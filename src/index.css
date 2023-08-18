@@ -61,6 +61,28 @@
         font-size: 50px;
         margin-top: 20px;
     }
+    /* --------alarm-------------------------- */
+    .realtime-class{
+        font-size: 55px;
+    }
+    .allinput-class{
+        width: 70px;
+        height: 60px;
+        font-size: 40px;
+    }
+    .add-class{
+        width: 90px;
+        height: 50px;
+        font-size: 15px;
+        /* margin-bottom: 100px; */
+    }
+    .alarm-class{
+        justify-content: start;
+        gap: 50px;
+    }
+    .laping-class{
+        margin-top: 10px;
+    }
 }
 
 /* ----------------------clock----------------------------------- */
@@ -141,13 +163,12 @@
         width: 90px;
         font-size: 20px;
     }
-
-    /* ------------------timer */
     .timerparent-class {
+        margin-top: 60px;
         font-size: 60px;
-        margin-top: 50px;
     }
 
+    
 }
 
 input::placeholder {
@@ -156,4 +177,10 @@ input::placeholder {
 
 input:focus {
     outline: none;
+}
+.add-class{
+    filter: drop-shadow(16px 16px 20px blue) ;
+}
+.realtime-class{
+    filter: drop-shadow(16px 16px 20px rgb(209, 153, 153)) ;
 }

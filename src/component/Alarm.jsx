@@ -10,8 +10,6 @@ const Alarm = () => {
     const [timesecond, setTimeSecond] = useState(new Date().toTimeString().split(" ")[0].split(":")[2]);
     const [meridiem, setMeridiem] = useState(new Date().getHours() >= 12 ? "PM" : "AM");
     const [realtime, setRealTime] = useState(new Date().toTimeString().split(" ")[0]);
-    // console.log(new Date().toTimeString().split(" ")[0].split(":")[0]);
-    // console.log(new Date().toLocaleTimeString().split(" ")[1]);
     const [hour, setHour] = useState("");
     const [minute, setMinute] = useState("");
     const [second, setSecond] = useState("");
@@ -109,24 +107,23 @@ const Alarm = () => {
     return (
         <>
             <Header />
-            <section className="bg-blue-800 h-[100vh] flex flex-col justify-evenly  items-center" >
-                
-               {addAlarm? <div className="overflow-auto w-[400px] h-[70px] text-[25px]">
+            <section className="bg-blue-800 h-[100vh] flex flex-col justify-evenly  items-center alarm-class overflow-hidden">
+               {alarms.length > 0 && addalarm? <div className="overflow-auto w-[400px] h-[70px] text-[25px] laping-class">
                     {alarms.map((alarm, index) => (
                         <div key={index} className="flex justify-around items-center gap-[20px]">{alarm.hour}:{alarm.minute}:{alarm.second} {alarm.aftermeridiem}
                             <button onClick={() => deleteAlarm(index)}><RiDeleteBin6Line/></button></div>
                     ))}
                 </div>:""}
-                <div className="text-[100px]">
+                <div className="text-[100px] realtime-class">
 
                     {realtime} <span>{meridiem}</span>
                 </div>
                 <div>
                     <div className="flex gap-[10px] h-[80px]  ">
-                        <input type="text" value={hour} onChange={handleChangeHour} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px]"   />
-                        <input type="text" value={minute} onChange={handleChangeMinute} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px]"  />
-                        <input type="text" value={second} onChange={handleChangeSecond} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px]" />
-                        <input type="text" list="bind" value={aftermeridiem} onChange={handleChangeMeridiem} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px]" />
+                        <input type="text" value={hour} onChange={handleChangeHour} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class"   />
+                        <input type="text" value={minute} onChange={handleChangeMinute} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class"  />
+                        <input type="text" value={second} onChange={handleChangeSecond} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class" />
+                        <input type="text" list="bind" value={aftermeridiem} onChange={handleChangeMeridiem} className="border w-[120px] text-center text-[55px] hover:bg-blue-400 rounded-[20px] caret-transparent allinput-class" />
                     </div>
 
                     <datalist id="bind">
@@ -134,9 +131,9 @@ const Alarm = () => {
                         <option value="AM" />
                     </datalist>
                 </div>
-                <div className="mb-[60px] flex gap-[20px] ">
-                    <button onClick={addAlarm} className="border-[2px] border-black rounded-[20px] text-[25px] h-[70px] w-[150px] hover:bg-blue-400">Add Alarm</button>
-                    {isAlarmPlaying ? <button onClick={stop} className="border-[2px] border-black rounded-[20px] text-[25px] h-[70px] w-[150px] hover:bg-blue-400">stop alarm</button> : ""}
+                <div className="mb-[60px] flex gap-[20px]">
+                    <button onClick={addAlarm} className="border-[2px] border-black rounded-[20px] text-[25px] h-[70px] w-[150px] hover:bg-blue-400 add-class">Add Alarm</button>
+                    {isAlarmPlaying ? <button onClick={stop} className="border-[2px] border-black rounded-[20px] text-[25px] h-[70px] w-[150px] hover:bg-blue-400 add-class">stop alarm</button> : ""}
                 </div>
                 <audio ref={audioref} >
                     <source src={music} />
