@@ -192,3 +192,6 @@ input:focus {
 .realtime-class{
     filter: drop-shadow(16px 16px 20px rgb(209, 153, 153)) ;
 }
+.active{
+    color:rgb(125, 211, 252);
+}

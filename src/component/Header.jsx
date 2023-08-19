@@ -1,25 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 const Header=()=>{
     return(
         <>
          <header className="bg-slate-800 font-serif">
         <nav>
           <ul className="flex justify-evenly items-center  h-20 text-4xl    text-sky-700 resnavi-class">
-            <li >
-              <Link  to="/" className="hover:text-sky-300 transition duration-700 ease-in " >WorldClock</Link>
+            <li > 
+              <NavLink  to="/" exactactiveClassName="active" className="hover:text-sky-300 transition duration-700 ease-in" >WorldClock</NavLink>
             </li>
             <li>
-              <Link to="/Alarm" className="hover:text-sky-300 transition duration-700 ease-in ">Alarm</Link>
+              <NavLink to="/Alarm" exactactiveClassName="active" className="hover:text-sky-300 transition duration-700 ease-in ">Alarm</NavLink>
             </li>
             <li>
-              <Link to="/Timer" className="hover:text-sky-300 transition duration-700 ease-in ">Timer</Link>
+              <NavLink to="/Timer" exactactiveClassName="active" className="hover:text-sky-300 transition duration-700 ease-in ">Timer</NavLink>
             </li>
             <li>
-              <Link to="/Stopwatch" className="hover:text-sky-300 transition duration-700 ease-in ">Stopwatch</Link>
+              <NavLink to="/Stopwatch" exactactiveClassName="active" className="hover:text-sky-300 transition duration-700 ease-in ">Stopwatch</NavLink>
             </li>
             <li>
-              <Link to="/Clock" className="hover:text-sky-300 transition duration-700 ease-in ">Clock</Link>
+              <NavLink to="/Clock" exactactiveClassName="active" className="hover:text-sky-300 transition duration-700 ease-in ">Clock</NavLink>
             </li>
           </ul>
         </nav>
